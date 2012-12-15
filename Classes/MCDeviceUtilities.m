@@ -15,7 +15,7 @@
     id obj = nil;
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        if ([UIScreen mainScreen].applicationFrame.size.height == 568.0) {
+        if ([UIScreen mainScreen].bounds.size.height == 568.0) {
             obj = iPhone5;
         } else {
             obj = iPhone4;
@@ -32,7 +32,7 @@
     void (^blk)(void) = nil;
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        if ([UIScreen mainScreen].applicationFrame.size.height == 568.0) {
+        if ([UIScreen mainScreen].bounds.size.height == 568.0) {
             blk = iPhone5;
         } else {
             blk = iPhone4;
