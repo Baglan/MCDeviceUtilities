@@ -44,4 +44,24 @@
     blk();
 }
 
++ (BOOL)isIPad
+{
+    return [[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone;
+}
+
++ (BOOL)isIPhone5
+{
+    return [MCDeviceUtilities screenSize].height == 568.0;
+}
+
++ (BOOL)isRetina
+{
+    return [UIScreen mainScreen].scale == 2.0;
+}
+
++ (CGSize)screenSize
+{
+    return [UIScreen mainScreen].bounds.size;
+}
+
 @end
