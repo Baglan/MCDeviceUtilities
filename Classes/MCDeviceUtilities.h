@@ -16,5 +16,6 @@
 + (BOOL)isIPhone5;
 + (BOOL)isRetina;
 + (CGSize)screenSize;
++ (BOOL)appIsEncrypted;
 
 @end
