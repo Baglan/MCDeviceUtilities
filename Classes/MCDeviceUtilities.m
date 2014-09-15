@@ -38,7 +38,7 @@ int main (int argc, char *argv[]);
     id obj = nil;
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        if ([UIScreen mainScreen].bounds.size.height == 568.0) {
+        if ([UIScreen mainScreen].bounds.size.height == 568.0 || [UIScreen mainScreen].bounds.size.width == 568.0) {
             obj = iPhone5;
         } else {
             obj = iPhone4;
@@ -55,7 +55,7 @@ int main (int argc, char *argv[]);
     void (^blk)(void) = nil;
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        if ([UIScreen mainScreen].bounds.size.height == 568.0) {
+        if ([UIScreen mainScreen].bounds.size.height == 568.0 || [UIScreen mainScreen].bounds.size.width == 568.0) {
             blk = iPhone5;
         } else {
             blk = iPhone4;
